@@ -1,0 +1,70 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    color: #FFF;
+}
+
+body {
+    background: #111;
+}
+
+.center {
+    /* width: 1200px; */
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: #FFF;
+}
+
+div.cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+div.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid black;
+    width: 180px;
+    height: 80px;
+    margin-bottom: 20px;
+
+}
+
+div.card div.servidor {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px;
+    px;
+    text-align: center;
+}
+
+div.card div.ip {
+    font-size: 20px;
+    padding: 3px;
+    text-align: center;
+}
+
+div.card div.status {
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px;
+    text-align: center;
+}
+
+.online {
+    background: #07cc00;
+    color: #000;
+}
+
+.offline {
+    background: #d10808;
+    color: #FFF;
+}
