@@ -28,9 +28,11 @@
 	<?php
 	foreach($servidores as $servidor => $ip)
 	{
-		$retorno = shell_exec("C:\Windows\system32\ping -n 1 $ip");
-
-		if (preg_match("/tempo</", $retorno) || preg_match("/tempo=/", $retorno))
+		// $retorno = shell_exec("C:\Windows\system32\ping -n 1 $ip"); - Este codigo não funciona em servidor compartilhado por questões de segurança.
+		$retorno = @fsockopen($ip,80,$errCode,$errStr,2);
+		
+		// if (preg_match("/tempo</", $retorno) || preg_match("/tempo=/", $retorno))  - Este codigo não funciona em servidor compartilhado por questões de segurança.
+		if ($retorno)
 		{
 			$status = "online";
 		} else {
